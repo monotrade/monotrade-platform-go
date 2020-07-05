@@ -1,3 +1,3 @@
-module github.com/m/v2
+module github.com/monotrade/monotrade-platform
 
 go 1.13
