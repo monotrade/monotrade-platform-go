@@ -2,10 +2,17 @@ package main
 
 import (
 	"fmt"
-	monotrade "github.com/monotrade/monotrade/monotrade-sdk-golang/monotrade"
+	"git.apache.org/thrift.git/lib/go/thrift"
+
+	//"github.com/monotrade/monotrade-sdk/monotrade/type"
+	//"../monotrade-sdk/monotrade/type"
+	"../monotrade-sdk/..."
+	
 )
 
 func main() {
-	monotrade
+	x := monotrade.monotrade.types.PriceType{}
 	fmt.Printf("hello, world\n")
+	fmt.Printf(x)
 }
+ 
