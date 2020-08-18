@@ -11,7 +11,7 @@ func main() {
 	// 创建一个新的结构体
 	fmt.Println(api.Tick{Symbol: "hello"})
 
-	var p platform.Platform
+	var p *platform.Platform = platform.NewPlatform()
 
 	p.AddGateway(new(MockGateway))
 	p.Start()
