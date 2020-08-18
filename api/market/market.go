@@ -1,4 +1,4 @@
-package api
+package market
 
 //Tick tick 行情数据
 type Tick struct {
