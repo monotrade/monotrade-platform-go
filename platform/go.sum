@@ -23,7 +23,6 @@ git.apache.org/thrift.git v0.0.0-20180902110319-2566ecd5d999/go.mod h1:fPE2ZNJGy
 git.apache.org/thrift.git v0.13.0/go.mod h1:fPE2ZNJGynbRyZ4dJvy6G277gSllfV2HJqblrnkyeyg=
 github.com/AsynkronIT/goconsole v0.0.0-20160504192649-bfa12eebf716/go.mod h1:2wH9LwjNrSqVmCIi35aqCJ0OGTE4DZ53LCRaGQESBp8=
 github.com/AsynkronIT/gonet v0.0.0-20161127091928-0553637be225/go.mod h1:RwIiSK8AJBCPP7hBBfXD1iferErYAmGbqv/Lu84ZFIA=
-github.com/AsynkronIT/protoactor-go v0.0.0-20200317173033-c483abfa40e2 h1:UTgOl+i/Y/91Si6EZeWLGbw5qoOw/gG918VKe6eqUm4=
 github.com/AsynkronIT/protoactor-go v0.0.0-20200317173033-c483abfa40e2/go.mod h1:oA0usvSnxPdbRUKVDvMBUqFyWQdVes7Xfcg5QSLE87A=
 github.com/Azure/azure-sdk-for-go v16.0.0+incompatible/go.mod h1:9XXNKU+eRnpl9moKnB4QOLf1HestfXbmab5FXxiDBjc=
 github.com/Azure/azure-sdk-for-go v31.1.0+incompatible/go.mod h1:9XXNKU+eRnpl9moKnB4QOLf1HestfXbmab5FXxiDBjc=
