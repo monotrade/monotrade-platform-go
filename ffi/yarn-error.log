@@ -1,0 +1,42 @@
+Arguments: 
+  /usr/bin/node /usr/local/bin/yarn add ffi-napi
+
+PATH: 
+  /home/holbrook/.cargo/bin:/home/holbrook/Documents/go/bin:/home/holbrook/.local/bin:/home/holbrook/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/PROGRA~1/ConEmu/ConEmu/wsl:/mnt/c/Program Files/ConEmu/ConEmu/Scripts:/mnt/c/Program Files/ConEmu:/mnt/c/Program Files/ConEmu/ConEmu:/mnt/d/Apps/Python36/Scripts:/mnt/d/Apps/Python36:/mnt/c/Python38/Scripts:/mnt/c/Python38:/mnt/d/Apps/vnstudio/Scripts:/mnt/d/Apps/vnstudio:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0:/mnt/c/windows/System32/OpenSSH:/mnt/c/Program Files/Microsoft SQL Server/130/Tools/Binn:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn:/mnt/d/Apps/Go/bin:/mnt/d/Apps/jdk-13/bin:/mnt/c/Program Files/Microsoft/Web Platform Installer:/mnt/c/Program Files (x86)/Microsoft ASP.NET/ASP.NET Web Pages/v1.0:/mnt/c/Program Files/Microsoft SQL Server/110/Tools/Binn:/mnt/d/Apps/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin:/mnt/d/Apps/nodejs:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/dotnet:/mnt/c/Users/Holbrook/.cargo/bin:/mnt/c/Users/Holbrook/AppData/Local/Microsoft/WindowsApps:/mnt/c/Wind/Wind.NET.Client/WindNET/bin:/mnt/c/Wind/Wind.NET.Client/WindNET/x64:/mnt/c/Users/Holbrook/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Holbrook/go/bin:/mnt/d/Apps/GoLand 2020.1.3/bin:/mnt/d/Holbrook/Documents/GoPath/bin:/mnt/c/Users/Holbrook/.dotnet/tools:/mnt/c/Users/Holbrook/AppData/Roaming/npm:/mnt/c/Users/Holbrook/.dotnet/tools:/snap/bin:/home/holbrook/.dotnet/tools:/usr/local/go/bin
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  10.21.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /mnt/d/Holbrook/Documents/monotrade/monotrade-platform-go/ffi/package.json: Unexpected token } in JSON at position 252
+      at JSON.parse (<anonymous>)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "monotrade-ffi",
+    "version": "0.1.0",
+    "description": "",
+    "main": "lib/index.js",
+    "author": "Holbrook <wanghaikuo@tsinghua.org.cn>",
+    "license": "MIT",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

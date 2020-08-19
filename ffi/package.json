@@ -1,0 +1,15 @@
+{
+  "name": "monotrade-ffi",
+  "version": "0.1.0",
+  "description": "",
+  "main": "lib/index.js",
+  "author": "Holbrook <wanghaikuo@tsinghua.org.cn>",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "ffi": "^2.3.0",
+    "ffi-napi": "^3.0.1"
+  }
+}
