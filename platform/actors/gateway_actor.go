@@ -8,6 +8,13 @@ import (
 	"github.com/AsynkronIT/protoactor-go/eventstream"
 )
 
+
+
+//TODO: use middleware to implement Risk Manager
+// https://proto.actor/docs/middleware/
+
+
+
 type GatewayActor struct {
 	// Gateway api.Gateway
 }
