@@ -1,10 +1,10 @@
 package main
 
-//会生成头文件
+//this can generate a .h file
+
 import "C"
 
-//for export
-//export 的注释是定义的入口描述不能省略
+//for export, required.
 
 //export InitPlatform
 func InitPlatform() {
