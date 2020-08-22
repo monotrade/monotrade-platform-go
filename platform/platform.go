@@ -21,11 +21,12 @@ func NewPlatform() *Platform {
 		return ok
 	})
 
-	return &Platform{actor.EmptyRootContext}
+	return &Platform{context: actor.EmptyRootContext}
 }
 
 type Platform struct {
-	context *actor.RootContext
+	context   *actor.RootContext
+	OnMessage func(message interface{})
 }
 
 func (p Platform) Start() {
@@ -44,4 +45,8 @@ func (p Platform) AddGateway(g api.Gateway) {
 
 	g.Start()
 	//actor.Start()
+}
+
+func (p Platform) AddStrategy(stategy api.Strategy, setting interface{}) {
+	fmt.Println("TODO: add strategy")
 }
