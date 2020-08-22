@@ -1,6 +1,8 @@
 package api
 
 import (
+	"errors"
+
 	. "github.com/monotrade/api/message"
 )
 
@@ -40,14 +42,14 @@ func (stgy StrategyBase) XX() {
 }
 
 func (stgy StrategyBase) Buy(symbol string, price float64, volume int) (string, error) {
-
+	return "", errors.New("")
 }
 func (stgy StrategyBase) Sell(symbol string, price float64, volume int) (string, error) {
-
+	return "", errors.New("")
 }
 func (stgy StrategyBase) Short(symbol string, price float64, volume int) (string, error) {
-
+	return "", errors.New("")
 }
 func (stgy StrategyBase) Cover(symbol string, price float64, volume int) (string, error) {
-
+	return "", errors.New("")
 }
