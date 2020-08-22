@@ -4,11 +4,13 @@ package main
 
 import "C"
 
+import "fmt"
+
 //for export, required.
 
 //export InitPlatform
 func InitPlatform() {
-
+	fmt.Println("I Love You!")
 }
 
 func main() {

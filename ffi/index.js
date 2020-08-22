@@ -25,17 +25,21 @@ function showText(text) {
 // });
 
 // 通过ffi加载myAddDll.dll
-const myAddDll = new ffi.Library('../native/export', {
-  'funAdd': // 声明这个dll中的一个函数
+const myAddDll = new ffi.Library('./native/export', {
+  'InitPlatform': // 声明这个dll中的一个函数
     [
-      'int', ['int', 'int'], // 用json的格式罗列其返回类型和参数类型
+      'void', [], // 用json的格式罗列其返回类型和参数类型
     ],
-  'selectball': ['void', ['pointer']],
+  // 'selectball': ['void', ['pointer']],
 });
 
-var callback = ffi.Callback('void', ['int', 'string'],
-      function (id, name) {
-        console.log("id: ", id);
-        console.log("name: ", name);
-      });
-    myHelloLib.selectball(callback);
+// var callback = ffi.Callback('void', ['int', 'string'],
+//       function (id, name) {
+//         console.log("id: ", id);
+//         console.log("name: ", name);
+//       });
+//     myHelloLib.selectball(callback);
+
+console.log(myAddDll.InitPlatform)
+
+myAddDll.InitPlatform()
