@@ -1,19 +1,15 @@
 package main
 
 /*
+#cgo CFLAGS: -I./include -I../../vc/include
 
-#cgo CFLAGS: -Iinclude
+#cgo LDFLAGS: -L../../vc/lib -L./lib -lKSMMApi
 
-#cgo LDFLAGS: -Llib -llibvideo
-
-#include "LBM_Plugin.h"
-
+#include "export.h"
 */
-import (
-	"C"
-	"fmt"
-	"syscall"
-)
+import "C"
+
+import "fmt"
 
 func main() {
 	fmt.Println("hello")
@@ -31,11 +27,14 @@ func main() {
 	// C.ST_THREADPOOL.InitPlugin()
 
 	//懒加载
-	dll32 := syscall.NewLazyDLL("KSMMApi.dll")
-	fmt.Println("call dll:", dll32.Name)
-	//获得函数
-	g := dll32.NewProc("LBM_Plugin.InitPlugin")
-	g.Call()
+	// dll32 := syscall.NewLazyDLL("KSMMApi.dll")
+	// fmt.Println("call dll:", dll32.Name)
+	// //获得函数
+	// g := dll32.NewProc("LBM_Plugin.InitPlugin")
+	// g.Call()
+
+	ret := C.InitPluginUseCfg() //PST_tagInitInfo pInitInfo
+	fmt.Println(ret)
 }
 
 func abort(funcname string, err error) {
