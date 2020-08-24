@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    
-    "ffi-napi": "^3.0.1"
+    "ffi-napi": "^3.0.1",
+    "ref-napi": "^3.0.0"
   }
 }
