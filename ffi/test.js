@@ -1,3 +1,3 @@
-var monotrade = require("monotrade-ffi")
+var monotrade = require("./lib/index")
 
-monotrade.start()
+console.log(monotrade)//.myAddDll)//.InitPlatform()
