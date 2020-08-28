@@ -55,6 +55,9 @@
 #define SEC_BIZ_DZJYMC                 55000016   //!< 大宗交易卖出
 #define SEC_BIZ_XJMR                   55000005   //!< 限价买入
 #define SEC_BIZ_XJMC                   55000006   //!< 限价卖出
+
+
+
 #define LEN_LOG 512
 #define LEN_CODELIST 3700
 /** 配置信息定义 */
@@ -163,7 +166,7 @@ struct STK_NQINFO
 struct STK_NQ_TICK
 {
   char szStkCode[8 + 1];    //!< 证券代码    fengwc alter 1.18 证券代码长度要统一       
-  char szStkName[16 + 1];       //!< 证券简称           
+  char szStkName[16];       //!< 证券简称           
   int nDate;                //!< 行情日期           
   int nTime;                //!< 行情时间           
   short nStatus;            //!< 行情状态
@@ -197,7 +200,6 @@ struct STK_NQ_ZSXX
   int nMMDishNum[2];          //!< 做市行情档数：0-买档数；1-卖档数
   int nMDDishNum[2];          //!< 投资行情档数：0-买档数；1-卖档数
   char cMMDataType[2];        //!< 做市数据类型：0-档位；1-笔数
-  char szWtTime[10 + 1];      //!< 行情时间
 };
 
 /** 做市股票报价入参 */
@@ -583,16 +585,6 @@ struct NQWTQUOTE_BACK_INFO
   char szStkCode[8 + 1];      //!< 股票代码
   char szOrderID[22 + 1];     //!< 合同序号
   int nOrderSn;               //!< 委托序号
-  char szUserDefine[16 + 1];  //!< 用户自定义
-};
-/** 精选层股票双边报价回报信息 */
-struct JXWTQUOTE_BACK_INFO
-{
-  char szStkCode[8 + 1];      //!< 股票代码
-  char szBidOrderID[22 + 1];     //!< 买合同序号
-  int nBidOrderSn;               //!< 买委托序号
-  char szAskOrderID[22 + 1];     //!< 卖合同序号
-  int nAskOrderSn;               //!< 卖委托序号
   char szUserDefine[16 + 1];  //!< 用户自定义
 };
 
