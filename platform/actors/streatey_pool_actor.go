@@ -1,5 +1,11 @@
 package actors
 
+// strategy pool is essentially a router
+// https://proto.actor/docs/routers/
+
+// use pool type to supervise StrategyActors !
+// https://proto.actor/docs/supervision/
+
 import (
 	"fmt"
 	"time"

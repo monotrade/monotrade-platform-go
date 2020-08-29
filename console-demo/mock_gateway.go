@@ -6,6 +6,7 @@ import (
 )
 
 type MockGateway struct {
+	func Publish()
 }
 
 func (gateway MockGateway) Start() {
@@ -22,7 +23,11 @@ func (gateway MockGateway) Start() {
 	// }
 	for t := range ticker.C {
 		fmt.Println(t)
-		fmt.Println("I Love You!")
+		fmt.Println("send tick from mock_gateway")
+		// 创建一个新的结构体
+		fmt.Println(Tick{Symbol: "hello"})
+		tick := Tick{}
+		fmt.Println(tick)
 	}
 
 	return
