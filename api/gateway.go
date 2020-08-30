@@ -7,8 +7,10 @@ type Gateway interface {
 
 type Broker interface {
 	Start()
+	GetName() string
 }
 
 type Feeder interface {
 	Start()
+	GetName() string
 }

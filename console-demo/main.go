@@ -9,28 +9,38 @@ func main() {
 
 	var p *platform.Platform = platform.NewPlatform()
 
-	p.AddGateway(new(MockGateway))
+	p.AddGateway(MockGateway{})
 
 	p.Start()
 
-	//vnpy
+	//vnpy no ui
+	// SETTINGS["log.file"] = True
+
 	// event_engine = EventEngine()
 	// main_engine = MainEngine(event_engine)
-	// #main_engine.add_gateway(CtpGateway)
 	// main_engine.add_gateway(RootnetGateway)
+	// ctaext_engine = main_engine.add_app(CtaExtStrategyApp)
+	// main_engine.write_log("主引擎创建成功")
 
-	// main_engine.add_app(CtaExtStrategyApp)
-	// main_engine.add_app(ETFMonitorApp)
+	// log_engine = main_engine.get_engine("log")
+	// event_engine.register(EVENT_CTAEXT_LOG, log_engine.process_log_event)
+	// main_engine.write_log("注册日志事件监听")
 
-	// main_engine.add_app(RiskManagerApp)
-	// #main_engine.add_app(DataRecorderApp)
-	// # 需要rqdatac
-	// #main_engine.add_app(ScriptTraderApp)
+	// main_engine.connect(rootnet_setting, "根网")
+	// main_engine.write_log("连接根网接口")
 
-	// main_window = MainWindow(main_engine, event_engine)
-	// main_window.showMaximized()
+	// sleep(10)
 
-	//vnpy
-	//def add_strategy(self, class_name: str, strategy_name: str, vt_symbol: str, setting: dict)
-	//p.AddStrategy(strategy,setting)
+	// ctaext_engine.init_engine()
+	// main_engine.write_log("策略引擎初始化完成")
+
+	// ctaext_engine.init_all_strategies()
+	// sleep(30)   # Leave enough time to complete strategy initialization
+	// main_engine.write_log("策略全部初始化")
+
+	// ctaext_engine.start_all_strategies()
+	// main_engine.write_log("策略全部启动")
+
+	// while True:
+	//     sleep(1)
 }

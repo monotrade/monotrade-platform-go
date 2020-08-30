@@ -11,6 +11,8 @@ import (
 
 //Go语言中没有构造函数，对象的创建一般交给一个全局的创建函数来完成
 func NewPlatform() *Platform {
+	es := &eventStream{}
+
 	sub := eventstream.Subscribe(func(event interface{}) {
 		fmt.Println("received %s", event)
 	})
@@ -38,6 +40,7 @@ func (p Platform) AddGateway(g api.Gateway) {
 	fmt.Println(g)
 	//actor := &actors.GatewayActor{}
 	// context := actor.EmptyRootContext
+	g.engine = DefaultEventEngine{}
 	props := actor.PropsFromProducer(func() actor.Actor { return &actors.GatewayActor{} })
 	pid := p.context.Spawn(props)
 
@@ -45,6 +48,16 @@ func (p Platform) AddGateway(g api.Gateway) {
 
 	g.Start()
 	//actor.Start()
+
+	// gateway = gateway_class(self.event_engine)
+	//     self.gateways[gateway.gateway_name] = gateway
+
+	//     # Add gateway supported exchanges into engine
+	//     for exchange in gateway.exchanges:
+	//         if exchange not in self.exchanges:
+	//             self.exchanges.append(exchange)
+
+	//     return gateway
 }
 
 func (p Platform) AddStrategy(stategy api.Strategy, setting interface{}) {

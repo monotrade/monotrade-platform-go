@@ -6,7 +6,11 @@ import (
 )
 
 type MockGateway struct {
-	func Publish()
+	Component
+}
+
+func (gateway MockGateway) GetName() {
+	return "MOCK"
 }
 
 func (gateway MockGateway) Start() {
