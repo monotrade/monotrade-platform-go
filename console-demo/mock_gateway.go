@@ -7,6 +7,7 @@ import (
 
 type MockGateway struct {
 	Component
+	Gateway
 }
 
 func (gateway MockGateway) GetName() {

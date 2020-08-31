@@ -7,6 +7,6 @@ import (
 type DefaultEventEngine struct {
 }
 
-func (engine DefaultEventEngine) Subscribe() {
-	sub := eventstream.Subscribe()
+func (engine DefaultEventEngine) Subscribe(fn func(event interface{})) {
+	sub := eventstream.Subscribe(fn)
 }

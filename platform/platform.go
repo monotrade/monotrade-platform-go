@@ -4,24 +4,23 @@ import (
 	"fmt"
 
 	"github.com/AsynkronIT/protoactor-go/actor"
-	"github.com/AsynkronIT/protoactor-go/eventstream"
 	"github.com/monotrade/api"
 	"github.com/monotrade/platform/actors"
 )
 
 //Go语言中没有构造函数，对象的创建一般交给一个全局的创建函数来完成
 func NewPlatform() *Platform {
-	es := &eventStream{}
+	// es := &eventStream{}
 
-	sub := eventstream.Subscribe(func(event interface{}) {
-		fmt.Println("received %s", event)
-	})
+	// sub := eventstream.Subscribe(func(event interface{}) {
+	// 	fmt.Println("received %s", event)
+	// })
 
 	// only allow strings
-	sub.WithPredicate(func(evt interface{}) bool {
-		_, ok := evt.(string)
-		return ok
-	})
+	// sub.WithPredicate(func(evt interface{}) bool {
+	// 	_, ok := evt.(string)
+	// 	return ok
+	// })
 
 	return &Platform{context: actor.EmptyRootContext}
 }
@@ -36,17 +35,17 @@ func (p Platform) Start() {
 
 }
 
-func (p Platform) AddGateway(g api.Gateway) {
+func (p Platform) AddComponent(c api.Component) {
 	fmt.Println(g)
 	//actor := &actors.GatewayActor{}
 	// context := actor.EmptyRootContext
-	g.engine = DefaultEventEngine{}
+	c.engine = DefaultEventEngine{}
 	props := actor.PropsFromProducer(func() actor.Actor { return &actors.GatewayActor{} })
 	pid := p.context.Spawn(props)
 
 	p.context.Send(pid, "Roger")
 
-	g.Start()
+	c.Start()
 	//actor.Start()
 
 	// gateway = gateway_class(self.event_engine)
